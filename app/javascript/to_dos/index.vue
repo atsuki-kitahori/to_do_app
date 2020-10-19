@@ -8,6 +8,10 @@
     <el-table-column
       prop="expired_at">
     </el-table-column>
+    <el-table-column
+      width="120">
+      <el-button type="danger" icon="el-icon-delete" circle></el-button>
+    </el-table-column>
   </el-table>
 </template>
 <script>
