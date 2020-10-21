@@ -2,60 +2,16 @@
   <div id="app">
   <el-tabs v-model="activeName">
     <el-tab-pane label="ToDo" name="toDo">
-      <el-table
-        :data="filter(toDos, false)"
-        style="width: 100%">
-        <el-table-column 
-        prop="finished">
-          <template v-slot="scope">
-            <el-checkbox v-model="scope.row.finished" 
-            @change="updateToDo(scope.row.id, scope.row.finished)"></el-checkbox>
-          </template>
-        </el-table-column>
-        <el-table-column
-          prop="title">
-        </el-table-column>
-        <el-table-column
-          prop="expired_at">
-        </el-table-column>
-        <el-table-column
-          width="120">
-          <template v-slot="scope">
-            <el-button @click="destroyToDo(scope.row.id)" type="danger" icon="el-icon-delete" circle></el-button>
-          </template>
-        </el-table-column>
-      </el-table>
+      <to-do-table v-bind:to-dos="filter(toDos, false)"></to-do-table>
     </el-tab-pane>
     <el-tab-pane label="終了したToDo" name="finishedToDo">
-      <el-table
-        :data="filter(toDos, true)"
-        style="width: 100%">
-        <el-table-column 
-        prop="finished">
-          <template v-slot="scope">
-            <el-checkbox v-model="scope.row.finished" 
-            @change="updateToDo(scope.row.id, scope.row.finished)"></el-checkbox>
-          </template>
-        </el-table-column>
-        <el-table-column
-          prop="title">
-        </el-table-column>
-        <el-table-column
-          prop="expired_at">
-        </el-table-column>
-        <el-table-column
-          width="120">
-          <template v-slot="scope">
-            <el-button @click="destroyToDo(scope.row.id)" type="danger" icon="el-icon-delete" circle></el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-
+      <to-do-table v-bind:to-dos="filter(toDos, true)"></to-do-table>
     </el-tab-pane>
   </el-tabs>
   </div>
 </template>
 <script>
+  import ToDoTable from '../to_dos/to-do-table'
   import axios from 'axios'
   import {reject, filter} from 'lodash';
   export default {
@@ -89,7 +45,13 @@
       },
       filter(toDos, finished) {
         return filter(toDos, ['finished', finished])
-      },
-    }        
+      }
+    },  
+    
+
+    components: {
+      ToDoTable
+    }
+
   }
 </script>
