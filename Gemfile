@@ -38,8 +38,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+<<<<<<< HEAD
   gem 'sqlite3'
   gem 'foreman'
+=======
+>>>>>>> parent of 8aa7cdcf... heroku準備
 end
 group :production do
   gem 'rails_12factor'
@@ -48,6 +51,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'annotate'
+<<<<<<< HEAD
 gem 'pg'
 gem 'materialize-sass'
 gem 'material_icons'
+=======
+>>>>>>> parent of 8aa7cdcf... heroku準備
