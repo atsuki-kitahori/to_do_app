@@ -40,9 +40,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 <<<<<<< HEAD
   gem 'sqlite3'
+<<<<<<< HEAD
   gem 'foreman'
 =======
 >>>>>>> parent of 8aa7cdcf... heroku準備
+=======
+>>>>>>> parent of cf20e001... デプロイの準備
 end
 group :production do
   gem 'rails_12factor'
@@ -53,7 +56,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'annotate'
 <<<<<<< HEAD
 gem 'pg'
+<<<<<<< HEAD
 gem 'materialize-sass'
 gem 'material_icons'
 =======
 >>>>>>> parent of 8aa7cdcf... heroku準備
+=======
+>>>>>>> parent of cf20e001... デプロイの準備
